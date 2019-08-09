@@ -22,6 +22,13 @@ func main() {
 	fmt.Print(arr1, "\n")
 	QuickSort(arr1)
 	fmt.Print(arr1, "\n")
+
+	fmt.Print("----------------------\n")
+
+	arr2 := createRandomArr(50)
+	fmt.Print(arr2, "\n")
+	QuickSort2(arr2)
+	fmt.Print(arr2, "\n")
 	// fmt.Print(createRandomArr(12), "\n")
 	// fmt.Print(createRandomArr(12), "\n")
 	// fmt.Print((3 / 2), "\n")
