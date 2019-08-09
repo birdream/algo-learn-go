@@ -6,7 +6,7 @@ func quickSort(values []int, left, right int) {
 	i, j := left, right
 
 	for i <= j {
-		for j >= p && values[j] > key {
+		for j >= p && values[j] >= key {
 			j--
 		}
 
@@ -15,7 +15,7 @@ func quickSort(values []int, left, right int) {
 			p = j
 		}
 
-		for i <= p && values[i] < key {
+		for i <= p && values[i] <= key {
 			i++
 		}
 

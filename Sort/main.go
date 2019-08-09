@@ -18,9 +18,11 @@ func createRandomArr(len int) []int {
 }
 
 func main() {
-
-	fmt.Print(createRandomArr(10), "\n")
-	fmt.Print(createRandomArr(12), "\n")
-	fmt.Print(createRandomArr(12), "\n")
-	fmt.Print((3 / 2), "\n")
+	arr1 := createRandomArr(50)
+	fmt.Print(arr1, "\n")
+	QuickSort(arr1)
+	fmt.Print(arr1, "\n")
+	// fmt.Print(createRandomArr(12), "\n")
+	// fmt.Print(createRandomArr(12), "\n")
+	// fmt.Print((3 / 2), "\n")
 }
