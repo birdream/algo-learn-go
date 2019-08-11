@@ -1,35 +1,46 @@
 package main
 
+import "fmt"
+
 func quickSort2(sortArr []int, left, right int) {
+	fmt.Println("------------------------------------in")
+	fmt.Println("left: ", left)
+	fmt.Println("right: ", right)
 
 	if left < right {
-		key := sortArr[(left+right)/2]
-		i, j := left, right
+		fmt.Println("----in1")
+		key := sortArr[left]
+		i, j := left+1, right
 
 		for {
-			// fmt.Println("111")
-			in := false
-			for sortArr[i] < key {
-				// fmt.Println("111111111111")
-				in = true
+			fmt.Println("---111")
+			for i <= j && sortArr[i] < key {
 				i++
 			}
-			// fmt.Println("222")
-			for sortArr[j] > key {
-				// fmt.Println("222222222222")
-				in = true
+			fmt.Println("---222")
+			for i < j && sortArr[j] > key {
 				j--
 			}
-			// fmt.Println("333")
-			// fmt.Println(i)
-			// fmt.Println(j)
-			if i >= j || !in {
+			fmt.Println("---333")
+			fmt.Println("i: ", i)
+			fmt.Println("j: ", j)
+
+			if i >= j {
 				break
 			}
-			// fmt.Println("444")
+
+			if sortArr[i] > key || sortArr[j] < key {
+				break
+			}
+
 			sortArr[i], sortArr[j] = sortArr[j], sortArr[i]
+
+			fmt.Println("---444")
 		}
 
+		fmt.Println("---5555")
+		fmt.Println("left: ", left)
+		fmt.Println("right: ", right)
 		quickSort2(sortArr, left, i-1)
 		quickSort2(sortArr, j+1, right)
 	}
