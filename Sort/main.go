@@ -17,6 +17,20 @@ func createRandomArr(len int) []int {
 	return res
 }
 
+func isSorted(arr []int) {
+	wrong := false
+	for i := 1; i < len(arr); i++ {
+		if arr[i-1] > arr[i] {
+			fmt.Println("Wrong Sort", arr[i-1], arr[i])
+			wrong = true
+			break
+		}
+	}
+	if !wrong {
+		fmt.Println("Correct Sort")
+	}
+}
+
 func main() {
 	// arr1 := createRandomArr(50)
 	// fmt.Print(arr1, "\n")
@@ -29,6 +43,7 @@ func main() {
 	fmt.Print(arr2, "\n")
 	QSortTwoWay(arr2)
 	fmt.Print(arr2, "\n")
+	isSorted(arr2)
 	// fmt.Print(createRandomArr(12), "\n")
 	// fmt.Print(createRandomArr(12), "\n")
 	// fmt.Print((3 / 2), "\n")
