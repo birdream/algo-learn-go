@@ -51,6 +51,13 @@ func main() {
 	QSortSingle(arr3)
 	fmt.Print(arr3, "\n")
 	isSorted(arr3)
+	fmt.Print("----------------------\n")
+
+	arr4 := createRandomArr(50)
+	fmt.Print(arr4, "\n")
+	QuickSortThreeWays(arr4)
+	fmt.Print(arr4, "\n")
+	isSorted(arr4)
 	// fmt.Print(createRandomArr(12), "\n")
 	// fmt.Print(createRandomArr(12), "\n")
 	// fmt.Print((3 / 2), "\n")
