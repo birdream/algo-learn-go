@@ -12,7 +12,7 @@ func CreateRandomArr(len int, p bool) []int {
 	rand.Seed(time.Now().UnixNano())
 
 	for i := 0; i < len; i++ {
-		res[i] = rand.Intn(150) - 50
+		res[i] = rand.Intn(150)
 	}
 
 	if p {
