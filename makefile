@@ -8,3 +8,6 @@ quick-sort:
 
 radix-sort:
 	cd ./Sort/radix-sort && go build -o s && ./s
+
+insert-sort:
+	cd ./Sort/insertion-sort && go build -o s && ./s
