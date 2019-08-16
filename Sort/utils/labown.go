@@ -7,12 +7,12 @@ import (
 )
 
 // CreateRandomArr dddd
-func CreateRandomArr(len int, p bool) []int {
+func CreateRandomArr(len int, p bool, max int) []int {
 	res := make([]int, len)
 	rand.Seed(time.Now().UnixNano())
 
 	for i := 0; i < len; i++ {
-		res[i] = rand.Intn(150)
+		res[i] = rand.Intn(max)
 	}
 
 	if p {

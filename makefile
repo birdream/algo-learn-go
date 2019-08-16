@@ -11,3 +11,6 @@ radix-sort:
 
 insert-sort:
 	cd ./Sort/insertion-sort && go build -o s && ./s
+
+recursive-sort:
+	cd ./Sort/recursive-sort && go build -o s && ./s

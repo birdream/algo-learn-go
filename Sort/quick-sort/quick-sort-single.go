@@ -32,14 +32,14 @@ func QSortSingle(arr []int) {
 func par(arr []int, l, r int) int {
 	mid := arr[l]
 	j := l + 1
-	for i := 0; i <= r; i++ {
+	for i := j; i <= r; i++ {
 		if arr[i] < mid {
 			j++
 			arr[i], arr[j] = arr[j], arr[i]
 		}
 	}
 
-	arr[l], arr[j] = arr[j], arr[l]
+	arr[j], arr[l] = arr[l], arr[j]
 
 	return j
 }
