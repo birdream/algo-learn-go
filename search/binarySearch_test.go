@@ -22,7 +22,7 @@ func TestBinarySearch(t *testing.T) {
 	// fmt.Println(sortedArray)
 	t.Run("should get correct index of binarySearch method", func(t *testing.T) {
 		target := rand.Intn(total)
-		expectRes := target + 1
+		expectRes := target
 
 		res := binarySearch(sortedArray, target)
 		if res != expectRes {
