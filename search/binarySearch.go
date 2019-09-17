@@ -15,7 +15,7 @@ func binarySearch(arr []int, target int) int {
 			l = mid + 1
 		}
 
-		if arr[mid] >= target {
+		if arr[mid] > target {
 			r = mid - 1
 		}
 	}
