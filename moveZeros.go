@@ -23,9 +23,9 @@ func moveZerosBySwitch(arr []int) []int {
 	arrLen := len(arr)
 
 	for i := 0; i < arrLen; i++ {
-		if arr[i] != 0 && k != 0 {
+		if arr[i] != 0 {
 			arr[i], arr[k] = arr[k], arr[i]
-			k = i
+			k++
 		}
 	}
 
