@@ -7,7 +7,7 @@ import (
 
 // 判断是否回文串 忽略大小写 只看数字和字母
 func validPalindrome(str string) bool {
-	str = strings.ToLower(str)
+	// str = strings.ToLower(str)
 	i := 0
 	j := len(str) - 1
 
@@ -22,7 +22,7 @@ func validPalindrome(str string) bool {
 			continue
 		}
 
-		if str[i] == str[j] {
+		if strings.EqualFold(string(str[i]), string(str[j])) {
 			i++
 			j--
 		} else {
