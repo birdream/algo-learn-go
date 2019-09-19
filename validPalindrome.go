@@ -10,14 +10,15 @@ func validPalindrome(str string) bool {
 	// str = strings.ToLower(str)
 	i := 0
 	j := len(str) - 1
+	pattern := "[a-z0-9A-Z]"
 
 	for i < j {
-		if ok, _ := regexp.MatchString("[a-z0-9A-Z]", string(str[i])); !ok {
+		if ok, _ := regexp.MatchString(pattern, string(str[i])); !ok {
 			i++
 			continue
 		}
 
-		if ok, _ := regexp.Match("[a-z0-9A-Z]", []byte{str[j]}); !ok {
+		if ok, _ := regexp.Match(pattern, []byte{str[j]}); !ok {
 			j--
 			continue
 		}
