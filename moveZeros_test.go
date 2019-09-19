@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestAll(t *testing.T) {
+func TestMoveZeros(t *testing.T) {
 	t.Run("move zeros by K should work", testMoveZerosByK)
 	t.Run("move zeros by switch should work", testMoveZerosBySwitch)
 }

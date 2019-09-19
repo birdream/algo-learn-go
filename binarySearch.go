@@ -1,5 +1,6 @@
 package algo
 
+// 二分查找
 func binarySearch(arr []int, target int) int {
 	length := len(arr)
 	l, r := 0, length-1
