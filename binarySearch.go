@@ -1,4 +1,4 @@
-package search
+package algo
 
 func binarySearch(arr []int, target int) int {
 	length := len(arr)

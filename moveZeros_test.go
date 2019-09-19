@@ -1,4 +1,4 @@
-package moveZeros
+package algo
 
 import (
 	"reflect"

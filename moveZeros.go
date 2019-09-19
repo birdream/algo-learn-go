@@ -1,4 +1,4 @@
-package moveZeros
+package algo
 
 func moveZerosByK(arr []int) []int {
 	k := 0
