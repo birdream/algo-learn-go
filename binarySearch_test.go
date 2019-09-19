@@ -1,7 +1,6 @@
 package learn
 
 import (
-	"fmt"
 	"math/rand"
 	"testing"
 )
@@ -28,7 +27,7 @@ func TestBinarySearch(t *testing.T) {
 		if res != expectRes {
 			t.Errorf("Result is not correct, get %d, expect %d", res, expectRes)
 		} else {
-			fmt.Printf("Pass the test expect %d \n", res)
+			// fmt.Printf("Pass the test expect %d \n", res)
 		}
 	})
 }

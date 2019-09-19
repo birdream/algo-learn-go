@@ -1,1 +1,33 @@
 package learn
+
+import (
+	"regexp"
+	"strings"
+)
+
+// 判断是否回文串 忽略大小写 只看数字和字母
+func validPalindrome(str string) bool {
+	str = strings.ToLower(str)
+	i := 0
+	j := len(str) - 1
+
+	for i < j {
+		if ok, _ := regexp.MatchString("[a-z0-9A-Z]", string(str[i])); !ok {
+			i++
+			continue
+		}
+
+		if ok, _ := regexp.Match("[a-z0-9A-Z]", []byte{str[j]}); !ok {
+			j--
+			continue
+		}
+
+		if str[i] == str[j] {
+			i++
+			j--
+		} else {
+			return false
+		}
+	}
+	return true
+}
