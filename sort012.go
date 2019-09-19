@@ -1,4 +1,4 @@
-package algo
+package learn
 
 // 将一个只含 0，1，2的数组快速排序
 func sortColors(arr []int) []int {

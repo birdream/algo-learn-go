@@ -1,4 +1,4 @@
-package algo
+package learn
 
 // 二分查找
 func binarySearch(arr []int, target int) int {

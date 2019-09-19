@@ -1,4 +1,4 @@
-package algo
+package learn
 
 // 将数组中的0移到数组尾部
 func moveZerosByK(arr []int) []int {
