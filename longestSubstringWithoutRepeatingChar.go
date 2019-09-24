@@ -7,14 +7,18 @@ func methodLSWRC(str string) string {
 	l := 0
 	r := -1
 	length := len(str)
-	key := make(map[byte]int)
+	keyMap := make(map[byte]int)
 	var res string
+
 	for l < length-1 {
-		if r+1 < length-1 && key[str[r]] == 0 {
+		// fmt.Println("--------")
+		// fmt.Println(keyMap[str[r]])
+		// fmt.Println("--------")
+		if r+1 < length-1 && keyMap[str[r+1]] == 0 {
 			r++
-			key[str[r]]++
+			keyMap[str[r]]++
 		} else {
-			key[str[l]]--
+			keyMap[str[l]]--
 			l++
 		}
 

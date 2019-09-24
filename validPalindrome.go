@@ -30,5 +30,6 @@ func validPalindrome(str string) bool {
 			return false
 		}
 	}
+
 	return true
 }
