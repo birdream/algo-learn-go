@@ -1,19 +1,6 @@
 package learn
 
-// ListNode 链表反转
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
-// NewListNode xxxx
-func NewListNode(v int) *ListNode {
-	return &ListNode{
-		Val:  v,
-		Next: nil,
-	}
-}
-
+// 反转链表
 func methodRLL(head *ListNode) *ListNode {
 	var pre *ListNode
 	cur := head

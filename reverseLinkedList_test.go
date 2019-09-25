@@ -1,7 +1,7 @@
 package learn
 
 import (
-	"fmt"
+	"reflect"
 	"testing"
 )
 
@@ -9,25 +9,15 @@ func TestMethodRLL(t *testing.T) {
 	t.Run("shoul work", testmethodRLL1)
 }
 
-func PrintList(l *ListNode) {
-	fmt.Println("==============")
-	for l != nil {
-		fmt.Println(l.Val)
-		l = l.Next
-	}
-	fmt.Println("==============")
-}
-
 func testmethodRLL1(t *testing.T) {
-	signalList := NewListNode(5)
-	signalList.Next = NewListNode(6)
-	signalList.Next.Next = NewListNode(7)
-	signalList.Next.Next.Next = NewListNode(8)
-	signalList.Next.Next.Next.Next = NewListNode(0)
+	source := []int{5, 6, 7, 8, 0}
+	signalList := NewListNode(11)
+	signalList.addList(source)
 
-	// PrintList(signalList)
+	head := methodRLL(signalList)
+	res := GetListValByArr(head)
 
-	methodRLL(signalList)
-
-	// PrintList(head)
+	if !reflect.DeepEqual(res, []int{0, 8, 7, 6, 5, 11}) {
+		t.Errorf("Error %d", res)
+	}
 }

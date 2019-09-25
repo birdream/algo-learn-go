@@ -1,6 +1,7 @@
 package learn
 
 import (
+	"reflect"
 	"testing"
 )
 
@@ -9,15 +10,14 @@ func TestMethodRLLWT(t *testing.T) {
 }
 
 func testmethodRLLWT1(t *testing.T) {
-	signalList := NewListNode(5)
-	signalList.Next = NewListNode(6)
-	signalList.Next.Next = NewListNode(7)
-	signalList.Next.Next.Next = NewListNode(8)
-	signalList.Next.Next.Next.Next = NewListNode(0)
-
-	PrintList(signalList)
+	source := []int{5, 6, 7, 8, 0}
+	signalList := NewListNode(11)
+	signalList.addList(source)
 
 	head := methodRLLWT(signalList, 2, 3)
+	res := GetListValByArr(head)
 
-	PrintList(head)
+	if !reflect.DeepEqual(res, []int{11, 6, 5, 7, 8, 0}) {
+		t.Errorf("Error %d", res)
+	}
 }
