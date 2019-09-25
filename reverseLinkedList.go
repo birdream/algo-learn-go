@@ -6,6 +6,14 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// NewListNode xxxx
+func NewListNode(v int) *ListNode {
+	return &ListNode{
+		Val:  v,
+		Next: nil,
+	}
+}
+
 func methodRLL(head *ListNode) *ListNode {
 	var pre *ListNode
 	cur := head
