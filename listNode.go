@@ -8,6 +8,14 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// NewNode ss
+func NewNode(v int) *ListNode {
+	return &ListNode{
+		Val:  v,
+		Next: nil,
+	}
+}
+
 // NewListNode xxxx
 func NewListNode(arr []int) (head *ListNode) {
 	l := &ListNode{}
