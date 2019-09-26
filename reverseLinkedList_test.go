@@ -10,14 +10,11 @@ func TestMethodRLL(t *testing.T) {
 }
 
 func testmethodRLL1(t *testing.T) {
-	source := []int{5, 6, 7, 8, 0}
-	signalList := NewListNode(11)
-	signalList.addList(source)
-
+	signalList := NewListNode([]int{5, 6, 7, 8, 0})
 	head := methodRLL(signalList)
 	res := GetListValByArr(head)
 
-	if !reflect.DeepEqual(res, []int{0, 8, 7, 6, 5, 11}) {
+	if !reflect.DeepEqual(res, []int{0, 8, 7, 6, 5}) {
 		t.Errorf("Error %d", res)
 	}
 }

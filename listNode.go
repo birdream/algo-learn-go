@@ -2,17 +2,36 @@ package learn
 
 import "fmt"
 
+// ListNode single linked list
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
 // NewListNode xxxx
-func NewListNode(v int) *ListNode {
-	return &ListNode{
-		Val:  v,
-		Next: nil,
+func NewListNode(arr []int) (head *ListNode) {
+	l := &ListNode{}
+
+	for i := 0; i < len(arr); i++ {
+		if i == 0 {
+			l = &ListNode{
+				Val:  arr[i],
+				Next: nil,
+			}
+
+			head = l
+			continue
+		}
+
+		l.Next = &ListNode{
+			Val:  arr[i],
+			Next: nil,
+		}
+
+		l = l.Next
 	}
+
+	return
 }
 
 func (l *ListNode) addList(arr []int) {
