@@ -16,5 +16,7 @@ recursive-sort:
 	cd ./Sort/recursive-sort && go build -o s && ./s
 
 run-test-list:
-	echo 'Running test on List' && \
-	cd ./List && go test
+	echo '\n==================' && \
+echo '======Running test on List=====' && \
+echo '==================\n' && \
+cd ./List && go test
