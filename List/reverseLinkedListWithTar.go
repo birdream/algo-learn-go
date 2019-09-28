@@ -1,4 +1,4 @@
-package learn
+package List
 
 // 给定区间内反转链表
 // M N node初始都是在头节点 preNode 在头节点的前一个节点 dummyNode

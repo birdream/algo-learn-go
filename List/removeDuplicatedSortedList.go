@@ -1,4 +1,4 @@
-package learn
+package List
 
 // 83 去除有序链表重复项
 func methodRDSL(head *ListNode) (h *ListNode) {

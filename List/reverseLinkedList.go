@@ -1,4 +1,4 @@
-package learn
+package List
 
 // 反转链表
 func methodRLL(head *ListNode) *ListNode {

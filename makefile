@@ -14,3 +14,7 @@ insert-sort:
 
 recursive-sort:
 	cd ./Sort/recursive-sort && go build -o s && ./s
+
+run-test-list:
+	echo 'Running test on List' && \
+	cd ./List && go test

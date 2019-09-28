@@ -1,4 +1,4 @@
-package learn
+package List
 
 // 328 将链表中奇数项排前面 偶数项排后面
 func oddEvenLinkedList(head *ListNode) *ListNode {
