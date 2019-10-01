@@ -1,18 +1,11 @@
 package List
 
 func removeLinkedListEle(head *ListNode, x int) *ListNode {
-
-	for head != nil && head.Val == x {
-		delNode := head
-		head = head.Next
-		delNode.Next = nil
+	dummyNode := &ListNode{
+		Val:  -1,
+		Next: head,
 	}
-
-	if head == nil {
-		return head
-	}
-
-	cur := head
+	cur := dummyNode
 
 	for cur.Next != nil {
 		if cur.Next.Val == x {
@@ -25,5 +18,5 @@ func removeLinkedListEle(head *ListNode, x int) *ListNode {
 		}
 	}
 
-	return head
+	return dummyNode.Next
 }
