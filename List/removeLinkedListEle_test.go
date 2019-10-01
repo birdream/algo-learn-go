@@ -10,6 +10,7 @@ func TestRemoveLinkedListEle(t *testing.T) {
 	t.Run("testRemoveLinkedListEle2 should work", testRemoveLinkedListEle2)
 	t.Run("testRemoveLinkedListEle3 should work", testRemoveLinkedListEle3)
 	t.Run("testRemoveLinkedListEle4 should work", testRemoveLinkedListEle4)
+	t.Run("testRemoveLinkedListEle5 should work", testRemoveLinkedListEle5)
 }
 
 func testRemoveLinkedListEle1(t *testing.T) {
@@ -52,6 +53,17 @@ func testRemoveLinkedListEle4(t *testing.T) {
 	resArr := GetListValByArr(res)
 
 	if !reflect.DeepEqual(resArr, []int{2}) {
+		t.Errorf("Error with %d", resArr)
+	}
+}
+
+func testRemoveLinkedListEle5(t *testing.T) {
+	l := NewListNode([]int{1, 1, 2})
+	res := removeLinkedListEle(l, 2)
+
+	resArr := GetListValByArr(res)
+
+	if !reflect.DeepEqual(resArr, []int{1, 1}) {
 		t.Errorf("Error with %d", resArr)
 	}
 }
