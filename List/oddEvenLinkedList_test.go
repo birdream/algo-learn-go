@@ -5,31 +5,28 @@ import (
 	"testing"
 )
 
-func TestMergeTwoSortedList(t *testing.T) {
-	t.Run("testMergeTwoSortedList1 should work", testMergeTwoSortedList1)
-	t.Run("testMergeTwoSortedList2 should work", testMergeTwoSortedList2)
+func TestOddEvenLinkedList(t *testing.T) {
+	t.Run("testOddEvenLinkedList1 should work", testOddEvenLinkedList1)
 }
 
-func testMergeTwoSortedList1(t *testing.T) {
-	l1 := NewListNode([]int{1, 2, 3})
-	l2 := NewListNode([]int{4, 5, 6, 7, 8})
+func testOddEvenLinkedList1(t *testing.T) {
+	signalList := NewListNode([]int{1, 2, 3, 4, 5, 6, 7, 8})
 
-	head := mergeTwoSortedList(l1, l2)
+	head := oddEvenLinkedList(signalList)
 	res := GetListValByArr(head)
 
-	if !reflect.DeepEqual(res, []int{1, 2, 3, 4, 5, 6, 7, 8}) {
+	if !reflect.DeepEqual(res, []int{1, 3, 5, 7, 2, 4, 6, 8}) {
 		t.Errorf("Error %d", res)
 	}
 }
 
-func testMergeTwoSortedList2(t *testing.T) {
-	l1 := NewListNode([]int{1, 2, 6, 9, 10})
-	l2 := NewListNode([]int{0, 4, 5, 6, 7, 8})
+func testOddEvenLinkedList2(t *testing.T) {
+	signalList := NewListNode([]int{1, 2, 3})
 
-	head := mergeTwoSortedList(l1, l2)
+	head := oddEvenLinkedList(signalList)
 	res := GetListValByArr(head)
 
-	if !reflect.DeepEqual(res, []int{0, 1, 2, 4, 5, 6, 6, 8, 9, 10}) {
+	if !reflect.DeepEqual(res, []int{1, 3, 2}) {
 		t.Errorf("Error %d", res)
 	}
 }
